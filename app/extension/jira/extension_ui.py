@@ -40,7 +40,7 @@ def app_specific_action(webdriver, datasets):
         def sub_measure():
             page.go_to_url(f"{JIRA_SETTINGS.server_url}/browse/{issue_key}")
             page.wait_until_visible((By.ID, "summary-val"))  # Wait for summary field visible
-            page.wait_until_visible((By.ID, "cc4-cross-connector-details-view"))  # Wait for you app-specific UI element by ID selector
+            page.wait_until_visible((By.ID, "cross-connector-details-view"))  # Wait for you app-specific UI element by ID selector
         sub_measure()
     measure()
 
